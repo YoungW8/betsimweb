@@ -53,12 +53,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Новая папка.loader.js";
+      var loaderUrl = buildUrl + "/betsimweb.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/Новая папка.data",
-        frameworkUrl: buildUrl + "/Новая папка.framework.js",
-        codeUrl: buildUrl + "/Новая папка.wasm.gz",
+        dataUrl: buildUrl + "/betsimweb.data",
+        frameworkUrl: buildUrl + "/betsimweb.framework.js",
+        codeUrl: buildUrl + "/betsimweb.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "BettingSimulator",
@@ -111,32 +111,25 @@
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 
-      // GitHub Pages does not let us set Content-Encoding for individual files.
-      // The WebAssembly binary is therefore stored as gzip and decompressed in
-      // the browser before Unity receives it.
+      // GitHub Pages serves gzip files without Content-Encoding.
       const nativeFetch = window.fetch.bind(window);
       window.fetch = async (resource, options) => {
         const response = await nativeFetch(resource, options);
         const url = typeof resource === "string" ? resource : resource.url;
         if (!url.endsWith(".wasm.gz")) return response;
-
+        if (!response.ok) throw new Error("Не удалось загрузить WebAssembly: " + response.status);
         if (typeof DecompressionStream === "undefined") {
           throw new Error("Этот браузер не поддерживает распаковку WebAssembly. Обновите браузер.");
         }
-
         const headers = new Headers(response.headers);
         headers.delete("Content-Encoding");
         headers.delete("Content-Length");
         headers.set("Content-Type", "application/wasm");
-
-        return new Response(
-          response.body.pipeThrough(new DecompressionStream("gzip")),
-          {
-            status: response.status,
-            statusText: response.statusText,
-            headers: headers,
-          }
-        );
+        return new Response(response.body.pipeThrough(new DecompressionStream("gzip")), {
+          status: response.status,
+          statusText: response.statusText,
+          headers: headers,
+        });
       };
 
       var script = document.createElement("script");
