@@ -58,7 +58,7 @@
         arguments: [],
         dataUrl: buildUrl + "/betsimweb.data",
         frameworkUrl: buildUrl + "/betsimweb.framework.js",
-        codeUrl: buildUrl + "/betsimweb.wasm.gz",
+        codeUrl: buildUrl + "/betsimweb.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "BettingSimulator",
@@ -110,27 +110,6 @@
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
-
-      // GitHub Pages serves gzip files without Content-Encoding.
-      const nativeFetch = window.fetch.bind(window);
-      window.fetch = async (resource, options) => {
-        const response = await nativeFetch(resource, options);
-        const url = typeof resource === "string" ? resource : resource.url;
-        if (!url.endsWith(".wasm.gz")) return response;
-        if (!response.ok) throw new Error("Не удалось загрузить WebAssembly: " + response.status);
-        if (typeof DecompressionStream === "undefined") {
-          throw new Error("Этот браузер не поддерживает распаковку WebAssembly. Обновите браузер.");
-        }
-        const headers = new Headers(response.headers);
-        headers.delete("Content-Encoding");
-        headers.delete("Content-Length");
-        headers.set("Content-Type", "application/wasm");
-        return new Response(response.body.pipeThrough(new DecompressionStream("gzip")), {
-          status: response.status,
-          statusText: response.statusText,
-          headers: headers,
-        });
-      };
 
       var script = document.createElement("script");
       script.src = loaderUrl;
