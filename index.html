@@ -7,7 +7,26 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   <script src="TemplateData/profiler.js"></script>
-  </head>
+  <script>
+// POCKET_PAGES_GZIP_V1: Pages recipe for an otherwise uncompressed Unity build.
+(() => {
+  const original = window.fetch.bind(window);
+  const target = new URL('Build/betsimweb.wasm.gz', document.baseURI).href;
+  window.fetch = async (resource, options) => {
+    const response = await original(resource, options);
+    const url = new URL(typeof resource === 'string' || resource instanceof URL ? resource : resource.url, document.baseURI).href;
+    if (url !== target) return response;
+    if (!response.ok) throw new Error("Unable to load the game. Check your connection and reload the page. Do not clear site data while an order is unresolved.");
+    // fetch already decodes a server-declared Content-Encoding.
+    if (response.headers.get('Content-Encoding')?.toLowerCase() === 'gzip') return response;
+    if (typeof DecompressionStream === 'undefined') throw new Error("This browser cannot load the game. Update your browser, then reload. Do not clear site data while an order is unresolved.");
+    const headers = new Headers(response.headers);
+    headers.delete('Content-Encoding'); headers.delete('Content-Length'); headers.set('Content-Type', 'application/wasm');
+    return new Response(response.body.pipeThrough(new DecompressionStream('gzip')), { status: response.status, statusText: response.statusText, headers });
+  };
+})();
+</script>
+</head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
@@ -58,7 +77,7 @@
         arguments: [],
         dataUrl: buildUrl + "/betsimweb.data",
         frameworkUrl: buildUrl + "/betsimweb.framework.js",
-        codeUrl: buildUrl + "/betsimweb.wasm",
+        codeUrl: buildUrl + "/betsimweb.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "BettingSimulator",
