@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "bundleSha256": "e7671adadcfd2f8e581d59697e8998fa7612130f1431df6fba0b76d4d9713cab",
+  "bundleSha256": "e91464e9c96bddacb9c8d36d8c9541773e9afc7f303950a4087fdc47ec9aa312",
   "sources": {
     "Assets/ThirdParty/AfflabsSdk/src/account-link.test.ts": "a039fcc884a6928bd6a0c5fc7aff8192ef515e840243a4ad44ba7054881ab8a7",
     "Assets/ThirdParty/AfflabsSdk/src/chart.ts": "eab6acc806502f9cb188eca0850847ef9f3719231f186474d895731aa3ad5069",
@@ -56,7 +56,7 @@
     "Tools/PocketWebGL/src/development.mjs": "a27c0ffd285d33524bb594496adf1fd8c3e3770cae6e8df7969d1a9b10577f7c",
     "Tools/PocketWebGL/src/entry.mjs": "e034bab529fe5972d313184276d4348f2efef136f20a7202453c523fe8424975",
     "Tools/PocketWebGL/src/live-consent.mjs": "de7b290773001ae81e21e7a57c5bca6fe7deb2b23b641e10d829cef9d662bf0c",
-    "Tools/PocketWebGL/src/locales/en.json": "8d526f28eab0e59260e16f3f7f2aba2ecc712f14203171b440c7c0b6292d3c4c",
+    "Tools/PocketWebGL/src/locales/en.json": "7b97dd09692177e3a54742493c98959820e334610f010bbac31ff8c067c05a6e",
     "Tools/PocketWebGL/src/localization.mjs": "e04b1d1af16e2965af6a14a7dbabbf5dc3aef54ecc2346642b8959ed576def12",
     "Tools/PocketWebGL/src/mock.mjs": "65de4f1601a78d0228b30154751747393f63da45200fc06e5dd3f2ce7d73c475",
     "Tools/PocketWebGL/src/orders.mjs": "a506e3a09da76a8799de2e931324a9306ae84fdcb2506d3eec8c1b8d77c1fd4e",
