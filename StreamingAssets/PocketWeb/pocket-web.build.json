@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "bundleSha256": "d5106f296b71994a6d9ecec3c8112faa280671d1f748079bb8afbc7fdb95a764",
+  "bundleSha256": "1f014aada420f6455364e28d3bbb8d8d7eeae90f5894c2ea893ea7655fb337c2",
   "sources": {
     "Assets/ThirdParty/AfflabsSdk/src/account-link.test.ts": "a039fcc884a6928bd6a0c5fc7aff8192ef515e840243a4ad44ba7054881ab8a7",
     "Assets/ThirdParty/AfflabsSdk/src/chart.ts": "eab6acc806502f9cb188eca0850847ef9f3719231f186474d895731aa3ad5069",
@@ -50,11 +50,11 @@
     "Tools/PocketWebGL/package-lock.json": "261b0a2a1fd1fcb0f399c39a6f9c54e524f612c5cb726682d9eb137d7169e9dd",
     "Tools/PocketWebGL/package.json": "de063c9371601f2ed8b8f92fc7014fae7b00b232f0c05f4c2038515dfe768ebb",
     "Tools/PocketWebGL/src/analytics.mjs": "548e6a57f926fc4ba1bf2e7ddf6844c66c54f763edbe6d33659d5c3b40106685",
-    "Tools/PocketWebGL/src/cashier-ui.mjs": "6ea5b11f67f8fdf5e4eae6316336053c8c9f865cd196e61e74e669f7f1df04bf",
+    "Tools/PocketWebGL/src/cashier-ui.mjs": "f8dc70b5552a28d0bf03cf7b58da2bc8325a514ff76d9ee5a11b5b73da8ce353",
     "Tools/PocketWebGL/src/cashier.mjs": "42db0a11fd0d12e6ed438505c4bd351b229182b4febdfc0c0a14aebc5c1921bc",
     "Tools/PocketWebGL/src/clock.mjs": "7273070a547a72667af43a5af22d99cdd6df5cf90fe0e09372bd668d83417335",
     "Tools/PocketWebGL/src/development.mjs": "a27c0ffd285d33524bb594496adf1fd8c3e3770cae6e8df7969d1a9b10577f7c",
-    "Tools/PocketWebGL/src/entry.mjs": "3b8cd29404a1e6a66f3322593c1f65a2a7771afa70975243a541acefa9f4d42f",
+    "Tools/PocketWebGL/src/entry.mjs": "fd20e396b18568ed1911c23e556125d7f685d1a7adaf476c79adff7e267ad559",
     "Tools/PocketWebGL/src/live-consent.mjs": "de7b290773001ae81e21e7a57c5bca6fe7deb2b23b641e10d829cef9d662bf0c",
     "Tools/PocketWebGL/src/locales/en.json": "1b1900b4ec2f3b477d280d93f20932e70a253b8ed96269750f24c10ec580b6f1",
     "Tools/PocketWebGL/src/localization.mjs": "e04b1d1af16e2965af6a14a7dbabbf5dc3aef54ecc2346642b8959ed576def12",
@@ -66,6 +66,6 @@
     "Tools/PocketWebGL/src/sdk.mjs": "0ff9e1dfc89d9930c66110861a779be0c02c332fc26a410a5045dac587552362",
     "Tools/PocketWebGL/src/session.mjs": "d55e0d45b1a3e675108953e2beb43c60a863d9d9850ed57892bcf0ad4a670448",
     "Tools/PocketWebGL/src/trade-policy.mjs": "8cf4fcdf0117c5ae836cbe6353b05ed976a871b4c64a21b9a09fd0723c80fe0c",
-    "Tools/PocketWebGL/src/ui.mjs": "235f4f875563d425484ef81cdbe3deead57c2554709a2ec32d57c5c550b7984e"
+    "Tools/PocketWebGL/src/ui.mjs": "56a4ea04b4f8fd94cb0d7ae772e91f275e6f768d86e269f34fe67834f7a33740"
   }
 }

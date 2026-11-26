@@ -1,12 +1,12 @@
 {
   "version": 1,
   "artifacts": {
-    "Build/betsimweb.data": "8a7c421e96eb9e5e22b8ef758d7e43c1c5a4d97af5e2ae3c0f660653216842fb",
-    "Build/betsimweb.framework.js": "89b7c59d7d984b3c7f54e3c28bdc98e9eba3e04e28f3e8549b167a46f8886fa4",
-    "Build/betsimweb.loader.js": "0938d4e535968190887b1b248d953d9c8a50b362edc314fd5f12d2416014e508",
-    "Build/betsimweb.wasm.gz": "367239412e51a8314ec115471f3dcf0ec2112f9d5a64d80e067f03193a060dd4",
-    "StreamingAssets/PocketWeb/pocket-web.build.json": "6a0119f989078a63eb58c0ceda448da2eb411336564031dbafc89af4ce63acb8",
-    "StreamingAssets/PocketWeb/pocket-web.js": "d5106f296b71994a6d9ecec3c8112faa280671d1f748079bb8afbc7fdb95a764",
+    "Build/betsimweb.data": "bcf7addb3406e946a8ca05ea74431e8625ecbb81a2a26ea9d44e165d4e3379ee",
+    "Build/betsimweb.framework.js": "f0e00f257a5668c27d12681f451acd4e6f591e173eb63500dc7c1bc873737732",
+    "Build/betsimweb.loader.js": "a4b71a7140b98623f9e6f1211accd98bb28a22392f8ea3677646df8f3d4d7683",
+    "Build/betsimweb.wasm.gz": "092b1c12d4a6d856e70f0ecc4d8e4d69aaa2988d1c2ace32af6921ed021e1d95",
+    "StreamingAssets/PocketWeb/pocket-web.build.json": "a307b054993a880cff2f8e70c8836edd051ea8a548f0245be59a139d7be7cb90",
+    "StreamingAssets/PocketWeb/pocket-web.js": "1f014aada420f6455364e28d3bbb8d8d7eeae90f5894c2ea893ea7655fb337c2",
     "TemplateData/MemoryProfiler.png": "0ce87be20d0c24ab6cb73b57de2004da261cc2a641e69319c6ae3fe11fc85483",
     "TemplateData/favicon.ico": "9c13beb90ee8f70580d52a21d5233970d1c89e71e4a34a462c22610941c3c77f",
     "TemplateData/fullscreen-button.png": "21221581673a54b8139d408d4a3f8d2b879e86827d4b6fc53b995ff7a99ee3e9",
